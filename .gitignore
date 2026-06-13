@@ -11,8 +11,7 @@ wheels/
 
 
 *.jsonl
-data/
-candidate_embeddings.npy
 *.pkl
-
+*.npy
 [PUB] India_runs_data_and_ai_challenge/
+data/
