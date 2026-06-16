@@ -9,7 +9,7 @@ sys.path.append(
     str(Path(__file__).resolve().parents[1])
 )
 
-from jd_parser import JDParser
+from jd_Parser.jd_parser import JDParser
 
 jd = JDParser.get_jd()
 

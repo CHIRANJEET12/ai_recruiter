@@ -1,17 +1,6 @@
-try:
-    from retrieval.bm25_retrieval import BM25Ranker
-    from retrieval.embedding_retrieval import EmbeddingRanker
-except ModuleNotFoundError:
-    from bm25_retrieval import BM25Ranker
-    from embedding_retrieval import EmbeddingRanker
-import sys
-from pathlib import Path
-
-sys.path.append(
-    str(Path(__file__).resolve().parents[1])
-)
-
-from jd_parser import JDParser
+from retrieval.bm25_retrieval import BM25Ranker
+from retrieval.embedding_retrieval import EmbeddingRanker
+from jd_Parser.jd_parser import JDParser
 
 
 class HybridRetriever:
