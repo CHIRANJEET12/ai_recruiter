@@ -1,7 +1,11 @@
 import json
+import pickle
 
-with open("sample_candidates.json","r",encoding="utf-8") as file:
-    data = json.load(file)
+with open(
+    "../data/candidate_corpus.pkl",
+    "rb",
+) as file:
+    data = pickle.load(file)
 
 
 def candidate_to_text(candidate) -> str:
@@ -40,7 +44,6 @@ Summary:
 {profile['summary']}
 """
 
-
     text += "\nSkills:\n"
 
     for skill in candidate["skills"]:
@@ -51,18 +54,14 @@ Summary:
             f"Experience: {skill['duration_months']} months\n"
         )
 
-
-
     if signals["skill_assessment_scores"]:
 
         text += "\nSkill Assessment Scores:\n"
 
-        for skill_name, score in (signals["skill_assessment_scores"].items()):
-            text += (
-                f"{skill_name}: "
-                f"{score}/100\n"
-            )
-
+        for skill_name, score in (
+            signals["skill_assessment_scores"].items()
+        ):
+            text += f"{skill_name}: {score}/100\n"
 
     text += "\nCareer History:\n"
 
@@ -77,98 +76,28 @@ Company Size: {job['company_size']}
 
 Description:
 {job['description']}
-
-"""
-
-
-
-    text += "\nEducation:\n"
-
-    for edu in candidate["education"]:
-
-        text += f"""
-Institution: {edu['institution']}
-Degree: {edu['degree']}
-Field Of Study: {edu['field_of_study']}
-Grade: {edu.get('grade', 'N/A')}
-Tier: {edu.get('tier', 'unknown')}
-"""
-
-
-
-    if candidate["certifications"]:
-
-        text += "\nCertifications:\n"
-
-        for cert in candidate["certifications"]:
-
-            text += (
-                f"{cert['name']} | "
-                f"{cert['issuer']} | "
-                f"{cert['year']}\n"
-            )
-
-
-    if candidate["languages"]:
-
-        text += "\nLanguages:\n"
-
-        for lang in candidate["languages"]:
-
-            text += (
-                f"{lang['language']} "
-                f"({lang['proficiency']})\n"
-            )
-
-
-
-    text += f"""
-
-Platform Signals
-
-Profile Completeness:
-{signals['profile_completeness_score']}
-
-Last Active Date:
-{signals['last_active_date']}
-
-Recruiter Response Rate:
-{signals['recruiter_response_rate']}
-
-Average Response Time:
-{signals['avg_response_time_hours']} hours
-
-Github Activity Score:
-{signals['github_activity_score']}
-
-Interview Completion Rate:
-{signals['interview_completion_rate']}
-
-Offer Acceptance Rate:
-{signals['offer_acceptance_rate']}
-
-Notice Period:
-{signals['notice_period_days']} days
-
-Preferred Work Mode:
-{signals['preferred_work_mode']}
-
-Willing To Relocate:
-{signals['willing_to_relocate']}
 """
 
     return text
 
 
-def save_candidate(candidate) -> dict:
+def save_candidate(candidate):
 
     return {
         "candidate_id": candidate["candidate_id"],
         "text": candidate_to_text(candidate),
+
+        "profile": candidate["profile"],
+        "skills": candidate["skills"],
+        "career_history": candidate["career_history"],
+        "education": candidate["education"],
+        "certifications": candidate["certifications"],
+        "languages": candidate["languages"],
+        "redrob_signals": candidate["redrob_signals"]
     }
 
 
-def all_candidate() -> list:
+def all_candidate():
 
     candidate_corpus = []
 
@@ -181,12 +110,28 @@ def all_candidate() -> list:
     return candidate_corpus
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 
-#     corpus = all_candidate()
+    corpus = all_candidate()
 
-#     print(corpus[0]["candidate_id"])
+    with open(
+        "../data/candidate_corpus.pkl",
+        "wb"
+    ) as file:
 
-#     print("=" * 100)
+        pickle.dump(
+            corpus,
+            file
+        )
 
-#     print(corpus[0]["text"][:5000])
+    print(
+        f"Saved {len(corpus)} candidates"
+    )
+
+    print(
+        corpus[0]["candidate_id"]
+    )
+
+    print(
+        corpus[0].keys()
+    )

@@ -1,0 +1,502 @@
+[
+    {
+        "candidate_id": "CAND_0000031",
+        "overall_score": 74.46,
+        "experience_score": 60,
+        "career_match_score": 100,
+        "evidence_score": 43.63,
+        "behavior_score": 75.51,
+        "trajectory_score": 50,
+        "honeypot_score": 25
+    },
+    {
+        "candidate_id": "CAND_0000014",
+        "overall_score": 52.55,
+        "experience_score": 84,
+        "career_match_score": 40,
+        "evidence_score": 43.78,
+        "behavior_score": 47.03,
+        "trajectory_score": 50,
+        "honeypot_score": 0
+    },
+    {
+        "candidate_id": "CAND_0000001",
+        "overall_score": 51.14,
+        "experience_score": 69,
+        "career_match_score": 47,
+        "evidence_score": 32.35,
+        "behavior_score": 63.48,
+        "trajectory_score": 50,
+        "honeypot_score": 15
+    },
+    {
+        "candidate_id": "CAND_0000010",
+        "overall_score": 49.83,
+        "experience_score": 46,
+        "career_match_score": 48,
+        "evidence_score": 39.11,
+        "behavior_score": 52.49,
+        "trajectory_score": 50,
+        "honeypot_score": 15
+    },
+    {
+        "candidate_id": "CAND_0000027",
+        "overall_score": 47.63,
+        "experience_score": 39,
+        "career_match_score": 53,
+        "evidence_score": 29.32,
+        "behavior_score": 62.05,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000043",
+        "overall_score": 43.73,
+        "experience_score": 83,
+        "career_match_score": 55,
+        "evidence_score": 12.62,
+        "behavior_score": 27.75,
+        "trajectory_score": 50,
+        "honeypot_score": 50
+    },
+    {
+        "candidate_id": "CAND_0000032",
+        "overall_score": 42.37,
+        "experience_score": 81,
+        "career_match_score": 40,
+        "evidence_score": 11.37,
+        "behavior_score": 49.26,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000036",
+        "overall_score": 35.93,
+        "experience_score": 100,
+        "career_match_score": 30,
+        "evidence_score": 7.47,
+        "behavior_score": 50.67,
+        "trajectory_score": 50,
+        "honeypot_score": 55
+    },
+    {
+        "candidate_id": "CAND_0000011",
+        "overall_score": 35.48,
+        "experience_score": 20,
+        "career_match_score": 35,
+        "evidence_score": 21.16,
+        "behavior_score": 51.93,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000030",
+        "overall_score": 34.69,
+        "experience_score": 100,
+        "career_match_score": 20,
+        "evidence_score": 6.97,
+        "behavior_score": 62.0,
+        "trajectory_score": 95,
+        "honeypot_score": 60
+    },
+    {
+        "candidate_id": "CAND_0000035",
+        "overall_score": 34.05,
+        "experience_score": 43,
+        "career_match_score": 38,
+        "evidence_score": 9.73,
+        "behavior_score": 31.13,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000021",
+        "overall_score": 33.51,
+        "experience_score": 100,
+        "career_match_score": 30,
+        "evidence_score": 4.5,
+        "behavior_score": 46.32,
+        "trajectory_score": 95,
+        "honeypot_score": 90
+    },
+    {
+        "candidate_id": "CAND_0000019",
+        "overall_score": 32.23,
+        "experience_score": 65,
+        "career_match_score": 30,
+        "evidence_score": 8.44,
+        "behavior_score": 23.74,
+        "trajectory_score": 95,
+        "honeypot_score": 55
+    },
+    {
+        "candidate_id": "CAND_0000015",
+        "overall_score": 32.21,
+        "experience_score": 54,
+        "career_match_score": 25,
+        "evidence_score": 9.45,
+        "behavior_score": 39.51,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000045",
+        "overall_score": 32.03,
+        "experience_score": 100,
+        "career_match_score": 30,
+        "evidence_score": 7.85,
+        "behavior_score": 30.66,
+        "trajectory_score": 50,
+        "honeypot_score": 75
+    },
+    {
+        "candidate_id": "CAND_0000047",
+        "overall_score": 25.54,
+        "experience_score": 24,
+        "career_match_score": 30,
+        "evidence_score": 6.43,
+        "behavior_score": 40.3,
+        "trajectory_score": 50,
+        "honeypot_score": 70
+    },
+    {
+        "candidate_id": "CAND_0000039",
+        "overall_score": 25.12,
+        "experience_score": 39,
+        "career_match_score": 20,
+        "evidence_score": 8.53,
+        "behavior_score": 38.34,
+        "trajectory_score": 95,
+        "honeypot_score": 75
+    },
+    {
+        "candidate_id": "CAND_0000004",
+        "overall_score": 22.74,
+        "experience_score": 38,
+        "career_match_score": 20,
+        "evidence_score": 6.42,
+        "behavior_score": 20.82,
+        "trajectory_score": 95,
+        "honeypot_score": 75
+    },
+    {
+        "candidate_id": "CAND_0000024",
+        "overall_score": 20.79,
+        "experience_score": 75,
+        "career_match_score": 15,
+        "evidence_score": 34.94,
+        "behavior_score": 65.95,
+        "trajectory_score": 95,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000020",
+        "overall_score": 17.695,
+        "experience_score": 63,
+        "career_match_score": 10,
+        "evidence_score": 32.28,
+        "behavior_score": 45.2,
+        "trajectory_score": 50,
+        "honeypot_score": 0
+    },
+    {
+        "candidate_id": "CAND_0000050",
+        "overall_score": 17.65,
+        "experience_score": 100,
+        "career_match_score": 5,
+        "evidence_score": 31.82,
+        "behavior_score": 48.47,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000025",
+        "overall_score": 16.005,
+        "experience_score": 73,
+        "career_match_score": 8,
+        "evidence_score": 23.9,
+        "behavior_score": 50.31,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000002",
+        "overall_score": 15.105,
+        "experience_score": 100,
+        "career_match_score": 10,
+        "evidence_score": 8.43,
+        "behavior_score": 36.0,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000041",
+        "overall_score": 15.07,
+        "experience_score": 100,
+        "career_match_score": 5,
+        "evidence_score": 6.7,
+        "behavior_score": 37.13,
+        "trajectory_score": 95,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000048",
+        "overall_score": 14.5,
+        "experience_score": 97,
+        "career_match_score": 5,
+        "evidence_score": 9.06,
+        "behavior_score": 45.33,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000009",
+        "overall_score": 14.16,
+        "experience_score": 100,
+        "career_match_score": 10,
+        "evidence_score": 7.25,
+        "behavior_score": 42.54,
+        "trajectory_score": 5,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000049",
+        "overall_score": 13.965,
+        "experience_score": 100,
+        "career_match_score": 5,
+        "evidence_score": 5.2,
+        "behavior_score": 41.3,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000037",
+        "overall_score": 13.835,
+        "experience_score": 100,
+        "career_match_score": 5,
+        "evidence_score": 9.45,
+        "behavior_score": 50.59,
+        "trajectory_score": 5,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000026",
+        "overall_score": 13.6,
+        "experience_score": 68,
+        "career_match_score": 15,
+        "evidence_score": 7.8,
+        "behavior_score": 41.99,
+        "trajectory_score": 5,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000042",
+        "overall_score": 13.545,
+        "experience_score": 50,
+        "career_match_score": 15,
+        "evidence_score": 7.38,
+        "behavior_score": 34.94,
+        "trajectory_score": 95,
+        "honeypot_score": 40
+    },
+    {
+        "candidate_id": "CAND_0000017",
+        "overall_score": 13.445,
+        "experience_score": 100,
+        "career_match_score": 10,
+        "evidence_score": 7.76,
+        "behavior_score": 24.46,
+        "trajectory_score": 50,
+        "honeypot_score": 40
+    },
+    {
+        "candidate_id": "CAND_0000033",
+        "overall_score": 13.41,
+        "experience_score": 86,
+        "career_match_score": 5,
+        "evidence_score": 7.77,
+        "behavior_score": 37.75,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000034",
+        "overall_score": 13.075,
+        "experience_score": 100,
+        "career_match_score": 10,
+        "evidence_score": 6.21,
+        "behavior_score": 20.93,
+        "trajectory_score": 50,
+        "honeypot_score": 40
+    },
+    {
+        "candidate_id": "CAND_0000005",
+        "overall_score": 12.835,
+        "experience_score": 100,
+        "career_match_score": 0,
+        "evidence_score": 11.75,
+        "behavior_score": 42.29,
+        "trajectory_score": 50,
+        "honeypot_score": 40
+    },
+    {
+        "candidate_id": "CAND_0000018",
+        "overall_score": 12.525,
+        "experience_score": 66,
+        "career_match_score": 5,
+        "evidence_score": 10.05,
+        "behavior_score": 34.42,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000044",
+        "overall_score": 12.37,
+        "experience_score": 57,
+        "career_match_score": 5,
+        "evidence_score": 5.9,
+        "behavior_score": 50.64,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000038",
+        "overall_score": 12.025,
+        "experience_score": 67,
+        "career_match_score": 0,
+        "evidence_score": 9.35,
+        "behavior_score": 45.12,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000007",
+        "overall_score": 11.87,
+        "experience_score": 55,
+        "career_match_score": 5,
+        "evidence_score": 6.34,
+        "behavior_score": 41.54,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000016",
+        "overall_score": 11.79,
+        "experience_score": 53,
+        "career_match_score": 10,
+        "evidence_score": 7.69,
+        "behavior_score": 61.11,
+        "trajectory_score": 5,
+        "honeypot_score": 40
+    },
+    {
+        "candidate_id": "CAND_0000029",
+        "overall_score": 11.66,
+        "experience_score": 72,
+        "career_match_score": 5,
+        "evidence_score": 5.92,
+        "behavior_score": 41.43,
+        "trajectory_score": 50,
+        "honeypot_score": 40
+    },
+    {
+        "candidate_id": "CAND_0000046",
+        "overall_score": 11.66,
+        "experience_score": 78,
+        "career_match_score": 0,
+        "evidence_score": 7.65,
+        "behavior_score": 53.62,
+        "trajectory_score": 5,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000023",
+        "overall_score": 11.2,
+        "experience_score": 37,
+        "career_match_score": 5,
+        "evidence_score": 5.91,
+        "behavior_score": 62.2,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000006",
+        "overall_score": 10.295,
+        "experience_score": 60,
+        "career_match_score": 0,
+        "evidence_score": 7.42,
+        "behavior_score": 22.3,
+        "trajectory_score": 50,
+        "honeypot_score": 20
+    },
+    {
+        "candidate_id": "CAND_0000040",
+        "overall_score": 9.655,
+        "experience_score": 16,
+        "career_match_score": 5,
+        "evidence_score": 8.3,
+        "behavior_score": 46.32,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000022",
+        "overall_score": 9.38,
+        "experience_score": 11,
+        "career_match_score": 10,
+        "evidence_score": 7.12,
+        "behavior_score": 28.82,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000028",
+        "overall_score": 9.045,
+        "experience_score": 11,
+        "career_match_score": 5,
+        "evidence_score": 7.65,
+        "behavior_score": 40.73,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000008",
+        "overall_score": 9.04,
+        "experience_score": 36,
+        "career_match_score": 0,
+        "evidence_score": 5.7,
+        "behavior_score": 40.55,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000003",
+        "overall_score": 8.01,
+        "experience_score": 11,
+        "career_match_score": 0,
+        "evidence_score": 7.65,
+        "behavior_score": 40.08,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000013",
+        "overall_score": 8.005,
+        "experience_score": 11,
+        "career_match_score": 0,
+        "evidence_score": 6.78,
+        "behavior_score": 42.18,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    },
+    {
+        "candidate_id": "CAND_0000012",
+        "overall_score": 7.09,
+        "experience_score": 11,
+        "career_match_score": 0,
+        "evidence_score": 6.99,
+        "behavior_score": 23.31,
+        "trajectory_score": 50,
+        "honeypot_score": 35
+    }
+]
