@@ -1,6 +1,4 @@
-from evidence import (
-    calculate_evidence_score
-)
+from .evidence import calculate_evidence_score
 
 
 def calculate_honeypot_score(candidate):

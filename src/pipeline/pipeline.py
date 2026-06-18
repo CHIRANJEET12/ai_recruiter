@@ -1,6 +1,7 @@
 from jd_Parser.jd_parser import JDParser
 from retrieval.hybrid_embed import HybridRetriever
-from ranking.cross_encoder import CrossEncoderRanker
+# from ranking.cross_encoder import CrossEncoderRanker
+from intelligence.main import Intelligence_Run
 
 from pipeline.candidate_repository import CandidateRepository
 from pipeline.timmer import Timer
@@ -16,9 +17,23 @@ class Pipeline:
         self.respository = CandidateRepository(corpus_path)
         self.retriever = HybridRetriever()
         self.reranker = final_ranker
+        self.intelligence = Intelligence_Run()
+        
 
     def getJobDescription(self):
         return JDParser.get_jd()
+    
+    def IntelligenceofCandidate(self, candidates):
+        timer = Timer()
+        timer.start()
+
+        intelligence_extract_rank = self.intelligence.run(candidates)
+
+        duration = timer.end()
+        print(f"⏱️ Intelligence Extract Time: {duration:.3f} sec")
+
+        return intelligence_extract_rank
+
     
     def retrieveCandidates(self, jd):
         timer = Timer()
@@ -64,10 +79,7 @@ class Pipeline:
         print("\n--- Top Ranked Candidates ---")
 
         for candidate in ranked_candidates[:top_n]:
-            print(
-                f"ID: {candidate['candidate_id']} "
-                f"| Score: {candidate['cross_score']:.4f}"
-            )
+            print(f"ID: {candidate} ")
     
     def run(self):
         timer = Timer()
@@ -77,15 +89,17 @@ class Pipeline:
         retrieve = self.retrieveCandidates(jd)
         passCand = self.passCandidate(retrieve)
         reranker = self.rerankCandidates(jd, passCand)
+        finalranked = self.IntelligenceofCandidate(reranker)
 
-        self.display_results(reranker)
+
+        self.display_results(finalranked)
 
         print(
             f"\n🚀 Total Execution Time: "
             f"{timer.end():.3f} sec"
         )
 
-        return reranker
+        return finalranked
 
 # if __name__ == "__main__":
 #     p = Pipeline()

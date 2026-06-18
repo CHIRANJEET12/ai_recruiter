@@ -14,5 +14,8 @@ class CandidateRepository:
         with open(self.path, "rb") as f:
             return pickle.load(f)
         
+    def getallCandidates(self):
+        return self.candidates
+        
     def getCandidates(self, candidate_id):
         return self.candidates[candidate_id]
