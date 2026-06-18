@@ -112,6 +112,6 @@ def calculate_honeypot_score(candidate):
         risk += 15
 
     return min(
-        risk,
-        100
+        risk/10,
+        10
     )
