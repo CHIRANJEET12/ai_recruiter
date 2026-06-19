@@ -1,5 +1,6 @@
 from sentence_transformers import CrossEncoder
 
+
 class CrossEncoderRanker:
     def __init__(self):
 
@@ -19,16 +20,9 @@ class CrossEncoderRanker:
         results = []
 
         for candidate, score in zip(retrieved_candidates, scores):
-            results.append({
-                "candidate_id":
-                    candidate["candidate_id"],
-
-                "cross_score":
-                    float(score),
-
-                "text":
-                    candidate["text"]
-            })
+            payload = dict(candidate)
+            payload["cross_score"] = float(score)
+            results.append(payload)
 
         results.sort(
             key = lambda x : x["cross_score"],
