@@ -2,6 +2,7 @@ from jd_Parser.jd_parser import JDParser
 from retrieval.hybrid_embed import HybridRetriever
 # from ranking.cross_encoder import CrossEncoderRanker
 from intelligence.main import Intelligence_Run
+from common.paths import resolve_corpus_path
 
 from pipeline.candidate_repository import CandidateRepository
 from pipeline.timmer import Timer
@@ -9,15 +10,24 @@ from pipeline.timmer import Timer
 class Pipeline:
 
     ## non default -> default args
-    def __init__(self, final_ranker, retrieval_k, rerank_k, corpus_path="../data/candidate_corpus.pkl"):
+    def __init__(
+        self,
+        final_ranker,
+        retrieval_k,
+        rerank_k,
+        corpus_path=None,
+        retriever=None,
+        intelligence_runner=None,
+    ):
 
         self.retrieval_k = retrieval_k
         self.rerank_k = rerank_k
 
-        self.respository = CandidateRepository(corpus_path)
-        self.retriever = HybridRetriever()
+        resolved_corpus_path = str(resolve_corpus_path()) if corpus_path is None else corpus_path
+        self.respository = CandidateRepository(resolved_corpus_path)
+        self.retriever = retriever or HybridRetriever()
         self.reranker = final_ranker
-        self.intelligence = Intelligence_Run()
+        self.intelligence = intelligence_runner or Intelligence_Run(corpus_path=resolved_corpus_path)
         
 
     def getJobDescription(self):
@@ -30,7 +40,7 @@ class Pipeline:
         intelligence_extract_rank = self.intelligence.run(candidates)
 
         duration = timer.end()
-        print(f"⏱️ Intelligence Extract Time: {duration:.3f} sec")
+        print(f"Intelligence Extract Time: {duration:.3f} sec")
 
         return intelligence_extract_rank
 
@@ -42,7 +52,7 @@ class Pipeline:
         candidates = self.retriever.retrieve(jd, top_k=self.retrieval_k)
         
         duration = timer.end()
-        print(f"⏱️ Retrieval Time: {duration:.3f} sec")
+        print(f"Retrieval Time: {duration:.3f} sec")
 
         return candidates
     
@@ -50,7 +60,9 @@ class Pipeline:
         passCand = []
 
         for candidate in retrieved_candidate:
-            data = self.respository.getCandidates(candidate["candidate_id"])
+            data = self.respository.getallCandidates().get(candidate["candidate_id"])
+            if data is None:
+                continue
 
             passCand.append({
                 "candidate_id": data["candidate_id"],
@@ -71,7 +83,7 @@ class Pipeline:
         )
 
         duration = timer.end()
-        print(f"⏱️ Reranking Time: {duration:.3f} sec")
+        print(f"Reranking Time: {duration:.3f} sec")
 
         return ranked
     
@@ -94,10 +106,7 @@ class Pipeline:
 
         self.display_results(finalranked)
 
-        print(
-            f"\n🚀 Total Execution Time: "
-            f"{timer.end():.3f} sec"
-        )
+        print(f"\nTotal Execution Time: {timer.end():.3f} sec")
 
         return finalranked
 

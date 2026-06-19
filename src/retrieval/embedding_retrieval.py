@@ -10,11 +10,12 @@ sys.path.append(
 )
 
 from jd_Parser.jd_parser import JDParser
+from common.paths import resolve_data_dir
 
 jd = JDParser.get_jd()
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR.parent.parent / "data"
+DATA_DIR = resolve_data_dir()
 
 
 class EmbeddingRanker:
