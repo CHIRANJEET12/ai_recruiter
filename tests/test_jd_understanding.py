@@ -3,6 +3,7 @@ import math
 import pytest
 
 from jd_understanding.parser import JDParserEngine
+from jd_understanding.langchain_parser import LangChainJDParser
 from jd_understanding.policy import WeightPolicyEngine
 from jd_understanding.schemas import ParsedJD
 
@@ -70,3 +71,12 @@ def test_weight_policy_prioritizes_skills_for_junior_ml_engineer():
     assert math.isclose(sum(weights.values()), 1.0, rel_tol=0, abs_tol=1e-9)
     assert weights["cross"] > weights["experience"]
     assert weights["evidence"] >= weights["trajectory"]
+
+
+def test_langchain_parser_adapter_returns_parsed_jd_contract():
+    parser = LangChainJDParser()
+    parsed = parser.parse("Senior AI Search Engineer Need: Retrieval, Ranking, Vector DB, 5+ years")
+
+    assert parsed.seniority == "senior"
+    assert parsed.years_required == 5
+    assert "ranking" in parsed.required_skills
