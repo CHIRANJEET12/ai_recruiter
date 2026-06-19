@@ -1,7 +1,7 @@
 from retrieval.bm25_retrieval import BM25Ranker
 from retrieval.embedding_retrieval import EmbeddingRanker
 from jd_Parser.jd_parser import JDParser
-
+from typing import Dict, List, Tuple
 
 class HybridRetriever:
     def __init__(self):
@@ -9,7 +9,7 @@ class HybridRetriever:
         self.embedding_ranker = EmbeddingRanker()
 
     @staticmethod
-    def normalize(scores):
+    def normalize(scores) -> Dict[str, float]:
 
         values = list(scores.values())
 
@@ -30,11 +30,11 @@ class HybridRetriever:
 
     def retrieve(
         self,
-        jd_query,
+        jd_query: str,
         top_k=500,
         bm25_weight=0.5,
         embedding_weight=0.5
-    ):
+    ) -> List[Dict[str, str | float]]:
         
         bm25_results = self.bm25_ranker.rank(jd_query)
 

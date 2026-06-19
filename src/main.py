@@ -13,10 +13,4 @@ if __name__ == "__main__":
 
     final_results = pipeline.run()
 
-    print("\n--- Final Ranking Summary ---")
-    for r in final_results[:10]:
-        print(
-            f"{r.candidate_id:20s}  "
-            f"{r.final_score:.4f}  "
-            f"{r.reasoning}"
-        )
+

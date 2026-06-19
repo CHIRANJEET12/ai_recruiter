@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Iterable, List
 
-from jd_understanding.policy import WeightPolicyEngine
-from jd_understanding.schemas import ParsedJD
+from jd_understanding import WeightPolicyEngine
+from jd_understanding import ParsedJD
 from ranking.reasoning import ReasonGenerator
 from ranking.scoring import FinalRankCalculator, ScoreNormalizer
 from ranking.schemas import CandidateComponentScores, RankedCandidate

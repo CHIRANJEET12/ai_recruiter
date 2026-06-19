@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import sys
 from pathlib import Path
-
+from typing import Dict, List, Tuple
 sys.path.append(
     str(Path(__file__).resolve().parents[1])
 )
@@ -43,7 +43,7 @@ class EmbeddingRanker:
             f"{self.candidate_embeddings.shape}"
         )
 
-    def rank(self, jd_query):
+    def rank(self, jd_query: str) -> List[Dict[str, str | float]]:
         print("\nEmbedding Job Description...\n")
 
         query_embedding = self.model.encode(
@@ -77,7 +77,7 @@ class EmbeddingRanker:
         return results
 
     @staticmethod
-    def get_score_dict(results):
+    def get_score_dict(results: List[Dict[str, str | float]]) -> Dict[str, float]:
         embedding_scores = {
             r["candidate_id"]: r["embedding_score"]
             for r in results
@@ -137,7 +137,7 @@ class CandidateRanker:
 
 
 
-    def run(self):
+    def run(self) -> Tuple[List[Dict[str, float | str]], Dict[str, float]]:
         jd_query = JDParser.get_jd()
 
         results = self.ranker.rank(jd_query)

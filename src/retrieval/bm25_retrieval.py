@@ -2,7 +2,7 @@ import pickle
 from rank_bm25 import BM25Okapi
 import sys
 from pathlib import Path
-
+from typing import List, Dict, Tuple
 sys.path.append(
     str(Path(__file__).resolve().parents[1])
 )
@@ -41,7 +41,7 @@ class BM25Ranker:
 
         self.bm25 = BM25Okapi(tokenized_docs)
 
-    def rank(self, query):
+    def rank(self, query: str) -> List[Dict[str, float | str]]:
 
         query_tokens = query.lower().split()
 
@@ -66,7 +66,7 @@ class BM25Ranker:
         return results
 
     @staticmethod
-    def get_score_dict(results):
+    def get_score_dict(results: List[Dict[str, str | float]]) -> Dict[str, float]:
 
         return {
             r["candidate_id"]: r["bm25_score"]
@@ -113,7 +113,7 @@ class CandidateRanker:
 
         self.ranker = BM25Ranker()
 
-    def run(self):
+    def run(self) -> Tuple[List[Dict[str, float | str]], Dict[str, float]]:
 
         jd_query = JDParser.get_jd()
 
