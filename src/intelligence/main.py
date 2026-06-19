@@ -1,6 +1,7 @@
 import json
 import csv
 import pickle
+import math
 
 from pathlib import Path
 
@@ -16,13 +17,21 @@ from .evidence import calculate_evidence_score
 from .honeypot import calculate_honeypot_score
 from .trajectory import calculate_trajectory_score
 from pipeline.candidate_repository import CandidateRepository
+from common.paths import resolve_corpus_path
 
 
 class Intelligence:
 
-    def __init__(self, corpus_path="../data/candidate_corpus.pkl"):
-        self.respository = CandidateRepository(corpus_path)
+    def __init__(self, corpus_path=None):
+        resolved_corpus_path = str(resolve_corpus_path()) if corpus_path is None else corpus_path
+        self.respository = CandidateRepository(resolved_corpus_path)
     
+    @staticmethod
+    def _to_percent_score(raw_score):
+        value = float(raw_score)
+        probability = 1.0 / (1.0 + math.exp(-value))
+        return probability * 100.0
+
     @staticmethod
     def score_candidate(candidate):
         experience_score = calculate_experience_score(candidate)
@@ -31,7 +40,8 @@ class Intelligence:
         behavior_score = calculate_behavior_score(candidate)
         trajectory_score = calculate_trajectory_score(candidate)
         honeypot_score = calculate_honeypot_score(candidate)
-        cross_score = candidate.get("cross_score", 0)
+        cross_score_raw = candidate.get("cross_score", 0)
+        cross_score = Intelligence._to_percent_score(cross_score_raw)
 
         overall_score = round(
             (
@@ -64,7 +74,7 @@ class Intelligence:
             "behavior_score": behavior_score,
             "trajectory_score": trajectory_score,
             "honeypot_score": honeypot_score,
-            "cross_score": candidate["cross_score"]
+            "cross_score": round(cross_score, 2)
         }
 
 class Save_data:
@@ -114,15 +124,15 @@ class Save_data:
 
 class Intelligence_Run:
 
-    def __init__(self):
-        self.score = Intelligence()
+    def __init__(self, corpus_path=None):
+        self.score = Intelligence(corpus_path=corpus_path)
         self.save = Save_data()
     
     def run(self, candidates):
 
         all_scores = []
 
-        data_map = self.score.respository.getallCandidates()
+        data_map = self.score.respository.getallEnrichedCandidates()
 
         # data_map = {
         #     candidate["candidate_id"] : candidate for candidate in data
