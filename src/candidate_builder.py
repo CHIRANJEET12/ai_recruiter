@@ -1,184 +1,112 @@
 import json
-import pickle
-
-with open("sample_candidates.json","r",encoding="utf-8") as file:
-    data = json.load(file)
 
 
-def candidate_to_text(candidate) -> str:
+# =====================================
+# TEXT BUILDER
+# =====================================
 
-    profile = candidate["profile"]
-    signals = candidate["redrob_signals"]
+def candidate_to_text(candidate):
 
-    text = f"""
-Candidate Summary
+    profile = candidate.get("profile", {})
 
-Current Title:
-{profile['current_title']}
+    skills = [
+        skill["name"]
+        for skill in candidate.get("skills", [])
+        if skill.get("name")          # skip empty skill names
+    ]
 
-Years Experience:
-{profile['years_of_experience']}
+    recent_roles = []
 
-Current Industry:
-{profile['current_industry']}
+    for job in candidate.get("career_history", [])[:3]:
 
-Current Company:
-{profile['current_company']}
+        title = job.get("title", "").strip()
+        company = job.get("company", "").strip()
 
-Location:
-{profile['location']}, {profile['country']}
-
-Open To Work:
-{signals['open_to_work_flag']}
-
-Github Activity:
-{signals['github_activity_score']}
-
-Headline:
-{profile['headline']}
-
-Summary:
-{profile['summary']}
-"""
-
-    text += "\nSkills:\n"
-
-    for skill in candidate["skills"]:
-        text += (
-            f"{skill['name']} | "
-            f"Proficiency: {skill['proficiency']} | "
-            f"Endorsements: {skill['endorsements']} | "
-            f"Experience: {skill['duration_months']} months\n"
-        )
-
-    if signals["skill_assessment_scores"]:
-
-        text += "\nSkill Assessment Scores:\n"
-
-        for skill_name, score in (
-            signals["skill_assessment_scores"].items()
-        ):
-            text += f"{skill_name}: {score}/100\n"
-
-    text += "\nCareer History:\n"
-
-    for job in candidate["career_history"]:
-
-        text += f"""
-        Title: {job['title']}
-        Company: {job['company']}
-        Duration: {job['duration_months']} months
-        Industry: {job['industry']}
-        Company Size: {job['company_size']}
-
-        Description:
-        {job['description']}
-        """
-
-    text += "\nEducation:\n"
-
-    for edu in candidate["education"]:
-
-        text += f"""
-Institution: {edu['institution']}
-Degree: {edu['degree']}
-Field Of Study: {edu['field_of_study']}
-Grade: {edu.get('grade', 'N/A')}
-Tier: {edu.get('tier', 'unknown')}
-"""
-
-
-
-    if candidate["certifications"]:
-
-        text += "\nCertifications:\n"
-
-        for cert in candidate["certifications"]:
-
-            text += (
-                f"{cert['name']} | "
-                f"{cert['issuer']} | "
-                f"{cert['year']}\n"
+        if title or company:
+            recent_roles.append(
+                f"{title} at {company}"
             )
 
+    return f"""
+Current Title: {profile.get('current_title', '').strip()}
 
-    if candidate["languages"]:
+Experience: {profile.get('years_of_experience', 0)} years
 
-        text += "\nLanguages:\n"
+Industry: {profile.get('current_industry', '').strip()}
 
-        for lang in candidate["languages"]:
+Skills: {', '.join(skills)}
 
-            text += (
-                f"{lang['language']} "
-                f"({lang['proficiency']})\n"
-            )
+Recent Roles: {' | '.join(recent_roles)}
 
+Headline: {profile.get('headline', '').strip()}
 
-
-    text += f"""
-
-Platform Signals
-
-Profile Completeness:
-{signals['profile_completeness_score']}
-
-Last Active Date:
-{signals['last_active_date']}
-
-Recruiter Response Rate:
-{signals['recruiter_response_rate']}
-
-Average Response Time:
-{signals['avg_response_time_hours']} hours
-
-Github Activity Score:
-{signals['github_activity_score']}
-
-Interview Completion Rate:
-{signals['interview_completion_rate']}
-
-Offer Acceptance Rate:
-{signals['offer_acceptance_rate']}
-
-Notice Period:
-{signals['notice_period_days']} days
-
-Preferred Work Mode:
-{signals['preferred_work_mode']}
-
-Willing To Relocate:
-{signals['willing_to_relocate']}
-"""
+Summary: {profile.get('summary', '').strip()}
+""".strip()
 
 
+# =====================================
+# STREAM (memory efficient — one at a time)
+# =====================================
 
-    return text
+def stream_candidates(jsonl_file):
+
+    with open(
+        jsonl_file,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        for line in f:
+
+            line = line.strip()
+
+            if not line:
+                continue
+
+            try:
+                candidate = json.loads(line)
+
+                yield {
+                    "candidate_id": candidate["candidate_id"],
+                    "text": candidate_to_text(candidate)
+                }
+
+            except (json.JSONDecodeError, KeyError) as e:
+                # skip malformed lines instead of crashing
+                print(f"Skipping malformed line: {e}")
 
 
-def save_candidate(candidate):
+# =====================================
+# CHUNK (for batched processing)
+# =====================================
 
-    return {
-        "candidate_id": candidate["candidate_id"],
-        "text": candidate_to_text(candidate),
+def chunk_candidates(
+    jsonl_file,
+    chunk_size=5000
+):
 
-        "profile": candidate["profile"],
-        "skills": candidate["skills"],
-        "career_history": candidate["career_history"],
-        "education": candidate["education"],
-        "certifications": candidate["certifications"],
-        "languages": candidate["languages"],
-        "redrob_signals": candidate["redrob_signals"]
-    }
+    chunk = []
+
+    for candidate in stream_candidates(jsonl_file):
+
+        chunk.append(candidate)
+
+        if len(chunk) >= chunk_size:
+            yield chunk
+            chunk = []
+
+    if chunk:
+        yield chunk
 
 
-def all_candidate():
+# =====================================
+# ALL (loads everything into memory)
+# =====================================
 
-    candidate_corpus = []
-
-    for candidate in data:
-
-        candidate_corpus.append(
-            save_candidate(candidate)
-        )
-
-    return candidate_corpus
+def all_candidate(jsonl_file="candidates.jsonl"):
+    """
+    Returns full list of all candidates.
+    Use only when you can afford to load 100k records into RAM.
+    For 100k candidates, expect ~500MB–1GB depending on text size.
+    """
+    return list(stream_candidates(jsonl_file))

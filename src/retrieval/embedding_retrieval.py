@@ -26,30 +26,32 @@ class EmbeddingRanker:
         with open(DATA_DIR / "candidate_ids.pkl", "rb") as f:
             self.ids = pickle.load(f)
 
+        self.query_embeddings = np.load(DATA_DIR / "jd_query_embeddings.npy")
+
         self.candidate_embeddings = np.load(
             DATA_DIR / "candidate_embeddings.npy"
         )
 
-        print("\nLoading Embedding Model...\n")
+        print(f"Embedding Shape: {self.candidate_embeddings.shape}")
+        print(f"Embedding length: {len(self.candidate_embeddings)}")
 
-        self.model = SentenceTransformer(
-            "BAAI/bge-base-en-v1.5"
-        )
+        # print("\nLoading Embedding Model...\n")
 
-        print("\nCreating Candidate Embeddings...\n")
+        # self.model = SentenceTransformer(
+        #     "BAAI/bge-base-en-v1.5"
+        # )
 
-        print(
-            f"\nEmbedding Shape: "
-            f"{self.candidate_embeddings.shape}"
-        )
+        # print("\nCreating Candidate Embeddings...\n")
+
+        # print(
+        #     f"\nEmbedding Shape: "
+        #     f"{self.candidate_embeddings.shape}"
+        # )
 
     def rank(self, jd_query: str) -> List[Dict[str, str | float]]:
         print("\nEmbedding Job Description...\n")
 
-        query_embedding = self.model.encode(
-            jd_query,
-            normalize_embeddings=True
-        )
+        query_embedding = self.query_embeddings
 
         similarities = cosine_similarity(
             [query_embedding],

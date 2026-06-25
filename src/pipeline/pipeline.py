@@ -28,6 +28,7 @@ class Pipeline:
         self.rerank_k = rerank_k
 
         resolved_corpus_path = str(resolve_corpus_path()) if corpus_path is None else corpus_path
+        print(resolved_corpus_path)
         self.respository = CandidateRepository(resolved_corpus_path)
         self.retriever = retriever or HybridRetriever()
         self.reranker = final_ranker
@@ -129,7 +130,7 @@ class Pipeline:
         ranked = self.ranking_engine.rank(parsed_jd, component_scores)
         return ranked
 
-    def display_results(self, ranked_candidates, top_n=10):
+    def display_results(self, ranked_candidates, top_n=100):
         print("\n--- Top Ranked Candidates ---")
         for candidate in ranked_candidates[:top_n]:
             print(f"ID: {candidate.candidate_id}  Score: {candidate.final_score}  | {candidate.reasoning}")
