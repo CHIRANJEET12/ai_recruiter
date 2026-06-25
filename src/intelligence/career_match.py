@@ -1,3 +1,5 @@
+from build_index import model
+
 def calculate_career_match_score(candidate):
 
     score = 0
