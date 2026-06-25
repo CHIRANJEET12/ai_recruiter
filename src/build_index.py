@@ -20,7 +20,7 @@ MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 # IMPORTS
 # =====================================
 
-from candidate_builder import stream_candidates
+from combine.candidate_builder import stream_candidates
 from sentence_transformers import SentenceTransformer
 from pipeline.timmer import Timer
 from jd_Parser.jd_parser import JDParser

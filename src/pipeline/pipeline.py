@@ -2,6 +2,7 @@ from jd_Parser.jd_parser import JDParser
 from retrieval.hybrid_embed import HybridRetriever
 from intelligence.main import Intelligence_Run
 from common.paths import resolve_corpus_path
+import pandas as pd
 
 from pipeline.candidate_repository import CandidateRepository
 from pipeline.timmer import Timer
@@ -148,6 +149,13 @@ class Pipeline:
         rule_ranked = self.runRuleEngine(reranked)
         intelligence_results = self.IntelligenceofCandidate(rule_ranked)
         final_ranked = self.finalizeWithJDWeightedRankings(parsed_jd, intelligence_results)
+
+        df = pd.DataFrame(final_ranked)
+        df.to_csv(
+    "final_ranked_candidates.csv",
+    index=False
+)
+        print("Saved to final_ranked_candidates.csv")
 
         self.display_results(final_ranked)
 

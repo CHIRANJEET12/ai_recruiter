@@ -68,7 +68,15 @@ def stream_candidates(jsonl_file):
 
                 yield {
                     "candidate_id": candidate["candidate_id"],
-                    "text": candidate_to_text(candidate)
+                    "text": candidate_to_text(candidate),
+
+            "profile": candidate["profile"],
+            "skills": candidate["skills"],
+            "career_history": candidate["career_history"],
+            "education": candidate["education"],
+            "certifications": candidate["certifications"],
+            "languages": candidate["languages"],
+            "redrob_signals": candidate["redrob_signals"]
                 }
 
             except (json.JSONDecodeError, KeyError) as e:
