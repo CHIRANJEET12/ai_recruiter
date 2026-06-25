@@ -1,101 +1,101 @@
-candidate_id,final_score,score_breakdown,reasoning
-CAND_0039754,0.816082,"{'cross': 0.7972972972972969, 'experience': 1.0, 'behavior': 0.7998046875, 'evidence': 0.8558823529411764, 'trajectory': 0.5}",Strong experience alignment and evidence strength.
-CAND_0093912,0.763946,"{'cross': 1.0, 'experience': 0.3561643835616438, 'behavior': 0.6017578125, 'evidence': 0.7906862745098039, 'trajectory': 1.0}",Strong retrieval relevance and career trajectory. Relative gap in experience alignment.
-CAND_0094759,0.754162,"{'cross': 0.7195945945945929, 'experience': 0.8082191780821918, 'behavior': 0.39414062500000013, 'evidence': 0.7843137254901962, 'trajectory': 1.0}",Strong career trajectory and experience alignment. Relative gap in behavior reliability.
-CAND_0041669,0.752691,"{'cross': 0.8243243243243233, 'experience': 0.726027397260274, 'behavior': 0.8175781249999999, 'evidence': 0.8193627450980393, 'trajectory': 0.5}",Strong retrieval relevance and evidence strength.
-CAND_0005649,0.732735,"{'cross': 0.9374999999999992, 'experience': 0.6438356164383562, 'behavior': 0.6623046874999999, 'evidence': 0.09950980392156865, 'trajectory': 1.0}",Strong career trajectory and retrieval relevance. Relative gap in evidence strength.
-CAND_0041610,0.730683,"{'cross': 0.9695945945945934, 'experience': 0.547945205479452, 'behavior': 0.5767578125, 'evidence': 0.7948529411764707, 'trajectory': 0.5}",Strong retrieval relevance and evidence strength.
-CAND_0055992,0.724167,"{'cross': 0.5777027027027029, 'experience': 1.0, 'behavior': 0.7509765625, 'evidence': 0.8080882352941177, 'trajectory': 0.5}",Strong experience alignment and evidence strength.
-CAND_0069905,0.715193,"{'cross': 0.903716216216215, 'experience': 0.5342465753424658, 'behavior': 0.741796875, 'evidence': 0.7497549019607843, 'trajectory': 0.5}",Strong retrieval relevance and evidence strength.
-CAND_0046064,0.677783,"{'cross': 0.6165540540540524, 'experience': 0.8493150684931506, 'behavior': 0.5572265625, 'evidence': 0.8024509803921568, 'trajectory': 0.5}",Strong experience alignment and evidence strength.
-CAND_0029367,0.675609,"{'cross': 0.6891891891891887, 'experience': 0.410958904109589, 'behavior': 0.498046875, 'evidence': 0.9671568627450982, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in experience alignment.
-CAND_0065878,0.64646,"{'cross': 0.6199324324324326, 'experience': 0.6986301369863014, 'behavior': 0.04121093750000013, 'evidence': 0.7490196078431371, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in behavior reliability.
-CAND_0049538,0.646383,"{'cross': 0.8175675675675679, 'experience': 0.4246575342465753, 'behavior': 0.5658203125, 'evidence': 0.8284313725490196, 'trajectory': 0.5}",Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
-CAND_0095528,0.645805,"{'cross': 0.7567567567567572, 'experience': 0.3561643835616438, 'behavior': 0.2955078125, 'evidence': 0.8242647058823529, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in behavior reliability.
-CAND_0098846,0.636487,"{'cross': 0.9206081081081083, 'experience': 0.6712328767123288, 'behavior': 0.506640625, 'evidence': 0.015196078431372531, 'trajectory': 0.5}",Strong retrieval relevance and experience alignment. Relative gap in evidence strength.
-CAND_0079064,0.62698,"{'cross': 0.6520270270270268, 'experience': 0.3424657534246575, 'behavior': 0.703125, 'evidence': 0.658578431372549, 'trajectory': 1.0}",Strong career trajectory and behavior reliability. Relative gap in experience alignment.
-CAND_0007412,0.62258,"{'cross': 0.5945945945945937, 'experience': 0.6438356164383562, 'behavior': 0.8277343750000001, 'evidence': 0.6181372549019608, 'trajectory': 0.5}",Strong behavior reliability and experience alignment.
-CAND_0070398,0.60162,"{'cross': 0.5996621621621615, 'experience': 0.6164383561643836, 'behavior': 0.48515625000000007, 'evidence': 0.7855392156862745, 'trajectory': 0.5}",Strong evidence strength and experience alignment.
-CAND_0055905,0.597836,"{'cross': 0.47128378378378233, 'experience': 0.7397260273972602, 'behavior': 0.471484375, 'evidence': 0.8865196078431372, 'trajectory': 0.5}",Strong evidence strength and experience alignment.
-CAND_0061265,0.594239,"{'cross': 0.798986486486487, 'experience': 0.5342465753424658, 'behavior': 0.571484375, 'evidence': 0.7906862745098039, 'trajectory': 0.0}",Strong retrieval relevance and evidence strength. Relative gap in career trajectory.
-CAND_0044855,0.592403,"{'cross': 0.41554054054053935, 'experience': 0.5342465753424658, 'behavior': 0.5363281250000002, 'evidence': 0.8205882352941176, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
-CAND_0018722,0.587522,"{'cross': 0.798986486486487, 'experience': 0.5342465753424658, 'behavior': 0.7548828125000001, 'evidence': 0.044852941176470595, 'trajectory': 0.5}",Strong retrieval relevance and behavior reliability. Relative gap in evidence strength.
-CAND_0008425,0.587052,"{'cross': 0.6216216216216202, 'experience': 0.6986301369863014, 'behavior': 0.5394531250000001, 'evidence': 0.9379901960784314, 'trajectory': 0.0}",Strong evidence strength and experience alignment. Relative gap in career trajectory.
-CAND_0042029,0.583409,"{'cross': 0.3631756756756741, 'experience': 0.5205479452054794, 'behavior': 0.6414062500000001, 'evidence': 0.838235294117647, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
-CAND_0018499,0.581115,"{'cross': 0.4037162162162162, 'experience': 0.6164383561643836, 'behavior': 0.7439453125000001, 'evidence': 0.9649509803921569, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0064326,0.580431,"{'cross': 0.4695945945945946, 'experience': 0.6712328767123288, 'behavior': 0.6376953125000001, 'evidence': 0.7524509803921569, 'trajectory': 0.5}",Strong evidence strength and experience alignment.
-CAND_0010257,0.578347,"{'cross': 0.4966216216216211, 'experience': 0.5205479452054794, 'behavior': 0.8261718749999999, 'evidence': 0.8012254901960785, 'trajectory': 0.5}",Strong behavior reliability and evidence strength.
-CAND_0091534,0.573084,"{'cross': 0.1959459459459453, 'experience': 1.0, 'behavior': 0.6478515625, 'evidence': 0.8080882352941177, 'trajectory': 0.5}",Strong experience alignment and evidence strength. Relative gap in retrieval relevance.
-CAND_0006557,0.572379,"{'cross': 0.49155405405405334, 'experience': 0.7123287671232876, 'behavior': 0.24589843750000007, 'evidence': 0.8767156862745098, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in behavior reliability.
-CAND_0014440,0.566292,"{'cross': 0.6841216216216209, 'experience': 0.5068493150684932, 'behavior': 0.47578125, 'evidence': 0.4977941176470587, 'trajectory': 0.5}",Strong retrieval relevance and experience alignment.
-CAND_0024620,0.565882,"{'cross': 0.8293918918918911, 'experience': 0.4383561643835616, 'behavior': 0.629296875, 'evidence': 0.08823529411764705, 'trajectory': 0.5}",Strong retrieval relevance and behavior reliability. Relative gap in evidence strength.
-CAND_0006567,0.563977,"{'cross': 0.3023648648648634, 'experience': 0.7123287671232876, 'behavior': 0.8091796875000001, 'evidence': 0.8732843137254901, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0081846,0.561708,"{'cross': 0.29729729729729565, 'experience': 0.547945205479452, 'behavior': 0.6560546875000001, 'evidence': 0.7899509803921568, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
-CAND_0041568,0.561554,"{'cross': 0.7854729729729714, 'experience': 0.3424657534246575, 'behavior': 0.05468750000000008, 'evidence': 0.8575980392156862, 'trajectory': 0.5}",Strong evidence strength and retrieval relevance. Relative gap in behavior reliability.
-CAND_0006418,0.558075,"{'cross': 0.46621621621621456, 'experience': 0.410958904109589, 'behavior': 0.8275390625000001, 'evidence': 0.9482843137254902, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in experience alignment.
-CAND_0076251,0.556789,"{'cross': 0.5540540540540541, 'experience': 0.6712328767123288, 'behavior': 0.21328125000000003, 'evidence': 0.6875, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in behavior reliability.
-CAND_0052328,0.556004,"{'cross': 0.6368243243243235, 'experience': 0.5205479452054794, 'behavior': 0.7988281250000001, 'evidence': 0.7901960784313725, 'trajectory': 0.0}",Strong behavior reliability and evidence strength. Relative gap in career trajectory.
-CAND_0026532,0.550504,"{'cross': 0.66722972972973, 'experience': 0.2876712328767123, 'behavior': 0.5236328125, 'evidence': 0.8210784313725491, 'trajectory': 0.5}",Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
-CAND_0078002,0.549838,"{'cross': 0.6368243243243235, 'experience': 0.4931506849315068, 'behavior': 0.7843749999999999, 'evidence': 0.8093137254901961, 'trajectory': 0.0}",Strong evidence strength and behavior reliability. Relative gap in career trajectory.
-CAND_0030953,0.547635,"{'cross': 0.353040540540541, 'experience': 0.6986301369863014, 'behavior': 0.6537109375, 'evidence': 0.7610294117647058, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
-CAND_0040117,0.546264,"{'cross': 0.6182432432432425, 'experience': 0.5205479452054794, 'behavior': 0.17695312500000004, 'evidence': 0.7551470588235294, 'trajectory': 0.5}",Strong evidence strength and retrieval relevance. Relative gap in behavior reliability.
-CAND_0036437,0.546051,"{'cross': 0.5810810810810805, 'experience': 0.2876712328767123, 'behavior': 0.8628906250000001, 'evidence': 0.7446078431372548, 'trajectory': 0.5}",Strong behavior reliability and evidence strength. Relative gap in experience alignment.
-CAND_0081852,0.541572,"{'cross': 0.6131756756756748, 'experience': 0.4383561643835616, 'behavior': 0.5248046875000001, 'evidence': 0.06470588235294115, 'trajectory': 1.0}",Strong career trajectory and retrieval relevance. Relative gap in evidence strength.
-CAND_0076904,0.538736,"{'cross': 0.6047297297297293, 'experience': 0.2054794520547945, 'behavior': 0.3398437500000001, 'evidence': 0.6889705882352941, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in experience alignment.
-CAND_0030031,0.535905,"{'cross': 0.5236486486486476, 'experience': 0.410958904109589, 'behavior': 0.6732421875, 'evidence': 0.7431372549019608, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in experience alignment.
-CAND_0037944,0.533062,"{'cross': 0.45945945945945915, 'experience': 0.3013698630136986, 'behavior': 0.25253906250000013, 'evidence': 0.9404411764705882, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in behavior reliability.
-CAND_0093331,0.53222,"{'cross': 0.07770270270270162, 'experience': 1.0, 'behavior': 0.6923828125, 'evidence': 0.7894607843137256, 'trajectory': 0.5}",Strong experience alignment and evidence strength. Relative gap in retrieval relevance.
-CAND_0083307,0.530204,"{'cross': 0.5540540540540541, 'experience': 0.6986301369863014, 'behavior': 0.6091796875, 'evidence': 0.09117647058823532, 'trajectory': 0.5}",Strong experience alignment and behavior reliability. Relative gap in evidence strength.
-CAND_0057701,0.523977,"{'cross': 0.6925675675675664, 'experience': 0.1917808219178082, 'behavior': 0.4814453125000001, 'evidence': 0.770343137254902, 'trajectory': 0.5}",Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
-CAND_0087364,0.519399,"{'cross': 0.5844594594594582, 'experience': 0.3013698630136986, 'behavior': 0.5677734375000001, 'evidence': 0.7502450980392157, 'trajectory': 0.5}",Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
-CAND_0046525,0.515593,"{'cross': 0.36993243243243196, 'experience': 0.4657534246575342, 'behavior': 0.7248046874999999, 'evidence': 0.8696078431372549, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0011687,0.51536,"{'cross': 0.15202702702702553, 'experience': 0.6986301369863014, 'behavior': 0.7525390625, 'evidence': 0.9987745098039217, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0078042,0.504853,"{'cross': 0.4425675675675658, 'experience': 0.273972602739726, 'behavior': 1.0, 'evidence': 0.7301470588235295, 'trajectory': 0.5}",Strong behavior reliability and evidence strength. Relative gap in experience alignment.
-CAND_0045250,0.501404,"{'cross': 0.38175675675675513, 'experience': 0.5342465753424658, 'behavior': 0.409375, 'evidence': 0.8556372549019607, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
-CAND_0036863,0.499405,"{'cross': 0.48648648648648557, 'experience': 0.2191780821917808, 'behavior': 0.1320312500000001, 'evidence': 0.8683823529411765, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in behavior reliability.
-CAND_0007009,0.490895,"{'cross': 0.22297297297297175, 'experience': 0.7123287671232876, 'behavior': 0.6632812500000002, 'evidence': 0.6549019607843137, 'trajectory': 0.5}",Strong experience alignment and behavior reliability. Relative gap in retrieval relevance.
-CAND_0084819,0.4864,"{'cross': 0.6114864864864846, 'experience': 0.2465753424657534, 'behavior': 0.7865234375000002, 'evidence': 0.8799019607843137, 'trajectory': 0.0}",Strong evidence strength and behavior reliability. Relative gap in career trajectory.
-CAND_0030827,0.483858,"{'cross': 0.5067567567567566, 'experience': 0.3698630136986301, 'behavior': 0.5222656250000002, 'evidence': 0.058333333333333355, 'trajectory': 1.0}",Strong career trajectory and behavior reliability. Relative gap in evidence strength.
-CAND_0099401,0.477353,"{'cross': 0.5084459459459443, 'experience': 0.684931506849315, 'behavior': 0.21816406250000003, 'evidence': 0.1686274509803922, 'trajectory': 0.5}",Strong experience alignment and retrieval relevance. Relative gap in evidence strength.
-CAND_0070485,0.460715,"{'cross': 0.35472972972972866, 'experience': 0.5068493150684932, 'behavior': 0.48515625000000007, 'evidence': 0.6071078431372549, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
-CAND_0047721,0.459343,"{'cross': 0.048986486486485126, 'experience': 0.589041095890411, 'behavior': 0.4585937500000001, 'evidence': 0.7862745098039216, 'trajectory': 1.0}",Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
-CAND_0064904,0.458854,"{'cross': 0.3462837837837832, 'experience': 0.3013698630136986, 'behavior': 0.6939453125, 'evidence': 0.8509803921568628, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in experience alignment.
-CAND_0031593,0.457679,"{'cross': 0.14020270270270238, 'experience': 0.6986301369863014, 'behavior': 0.6044921875, 'evidence': 0.7095588235294117, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
-CAND_0092278,0.456667,"{'cross': 0.38344594594594517, 'experience': 0.5616438356164384, 'behavior': 0.0, 'evidence': 0.7948529411764707, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in behavior reliability.
-CAND_0009837,0.455083,"{'cross': 0.3851351351351352, 'experience': 0.2191780821917808, 'behavior': 0.7191406250000001, 'evidence': 0.8541666666666666, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in experience alignment.
-CAND_0017960,0.449196,"{'cross': 0.371621621621622, 'experience': 0.684931506849315, 'behavior': 0.619140625, 'evidence': 0.0, 'trajectory': 0.5}",Strong experience alignment and behavior reliability. Relative gap in evidence strength.
-CAND_0086151,0.446952,"{'cross': 0.16891891891891886, 'experience': 0.684931506849315, 'behavior': 0.41542968750000003, 'evidence': 0.7318627450980393, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
-CAND_0074735,0.446467,"{'cross': 0.24324324324324278, 'experience': 0.3835616438356164, 'behavior': 0.8275390625000001, 'evidence': 0.7705882352941177, 'trajectory': 0.5}",Strong behavior reliability and evidence strength. Relative gap in retrieval relevance.
-CAND_0042100,0.440346,"{'cross': 0.275337837837837, 'experience': 0.6301369863013698, 'behavior': 0.6091796875, 'evidence': 0.8617647058823529, 'trajectory': 0.0}",Strong evidence strength and experience alignment. Relative gap in career trajectory.
-CAND_0027801,0.440345,"{'cross': 0.1249999999999991, 'experience': 0.6438356164383562, 'behavior': 0.5929687499999999, 'evidence': 0.7374999999999999, 'trajectory': 0.5}",Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
-CAND_0068811,0.437616,"{'cross': 0.12162162162162139, 'experience': 0.726027397260274, 'behavior': 0.5341796875000001, 'evidence': 0.6112745098039215, 'trajectory': 0.5}",Strong experience alignment and evidence strength. Relative gap in retrieval relevance.
-CAND_0007460,0.434227,"{'cross': 0.37668918918918975, 'experience': 0.273972602739726, 'behavior': 0.6298828125, 'evidence': 0.6821078431372549, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in experience alignment.
-CAND_0000031,0.431906,"{'cross': 0.23310810810810728, 'experience': 0.4520547945205479, 'behavior': 0.6708984375000001, 'evidence': 0.6818627450980392, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0066999,0.426799,"{'cross': 0.5016891891891888, 'experience': 0.4383561643835616, 'behavior': 0.3705078125000001, 'evidence': 0.6977941176470589, 'trajectory': 0.0}",Strong evidence strength and retrieval relevance. Relative gap in career trajectory.
-CAND_0086022,0.424759,"{'cross': 0.2347972972972973, 'experience': 0.3561643835616438, 'behavior': 0.5333984375, 'evidence': 0.9296568627450981, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0058688,0.416637,"{'cross': 0.08108108108108172, 'experience': 0.547945205479452, 'behavior': 0.7968749999999999, 'evidence': 0.6975490196078432, 'trajectory': 0.5}",Strong behavior reliability and evidence strength. Relative gap in retrieval relevance.
-CAND_0096142,0.416157,"{'cross': 0.19087837837837757, 'experience': 0.3150684931506849, 'behavior': 0.6871093750000001, 'evidence': 0.9399509803921567, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0002025,0.414761,"{'cross': 0.5405405405405409, 'experience': 0.4383561643835616, 'behavior': 0.727734375, 'evidence': 0.191421568627451, 'trajectory': 0.0}",Strong behavior reliability and retrieval relevance. Relative gap in career trajectory.
-CAND_0011162,0.410818,"{'cross': 0.39527027027027073, 'experience': 0.4246575342465753, 'behavior': 0.6714843750000001, 'evidence': 0.11078431372549015, 'trajectory': 0.5}",Strong behavior reliability and career trajectory. Relative gap in evidence strength.
-CAND_0044883,0.409456,"{'cross': 0.3378378378378377, 'experience': 0.4931506849315068, 'behavior': 0.7357421875, 'evidence': 0.07230392156862749, 'trajectory': 0.5}",Strong behavior reliability and career trajectory. Relative gap in evidence strength.
-CAND_0054123,0.39632,"{'cross': 0.18412162162162216, 'experience': 0.273972602739726, 'behavior': 0.7386718750000001, 'evidence': 0.843627450980392, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0003977,0.394648,"{'cross': 0.3243243243243245, 'experience': 0.2602739726027397, 'behavior': 0.3802734375000001, 'evidence': 0.7622549019607843, 'trajectory': 0.5}",Strong evidence strength and career trajectory. Relative gap in experience alignment.
-CAND_0010770,0.393196,"{'cross': 0.032094594594594204, 'experience': 1.0, 'behavior': 0.4814453125000001, 'evidence': 0.01764705882352943, 'trajectory': 0.5}",Strong experience alignment and career trajectory. Relative gap in evidence strength.
-CAND_0062247,0.392919,"{'cross': 0.2145270270270263, 'experience': 0.6301369863013698, 'behavior': 0.6908203125000001, 'evidence': 0.05882352941176472, 'trajectory': 0.5}",Strong behavior reliability and experience alignment. Relative gap in evidence strength.
-CAND_0030468,0.382658,"{'cross': 0.018581081081080978, 'experience': 0.3698630136986301, 'behavior': 0.7585937500000001, 'evidence': 1.0, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0075249,0.364308,"{'cross': 0.020270270270268634, 'experience': 0.4794520547945205, 'behavior': 0.6083984375000001, 'evidence': 0.7605392156862746, 'trajectory': 0.5}",Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
-CAND_0019480,0.363371,"{'cross': 0.38344594594594517, 'experience': 0.0136986301369863, 'behavior': 0.6392578125, 'evidence': 0.625, 'trajectory': 0.5}",Strong behavior reliability and evidence strength. Relative gap in experience alignment.
-CAND_0015528,0.357324,"{'cross': 0.12668918918918914, 'experience': 0.6438356164383562, 'behavior': 0.5158203124999999, 'evidence': 0.6914215686274511, 'trajectory': 0.0}",Strong evidence strength and experience alignment. Relative gap in career trajectory.
-CAND_0061339,0.354116,"{'cross': 0.236486486486485, 'experience': 0.2054794520547945, 'behavior': 0.6876953125000002, 'evidence': 0.546813725490196, 'trajectory': 0.5}",Strong behavior reliability and evidence strength. Relative gap in experience alignment.
-CAND_0070202,0.349075,"{'cross': 0.1925675675675676, 'experience': 0.3287671232876712, 'behavior': 0.14550781250000006, 'evidence': 0.8448529411764706, 'trajectory': 0.5}",Strong evidence strength and career trajectory. Relative gap in behavior reliability.
-CAND_0066376,0.345917,"{'cross': 0.3462837837837832, 'experience': 0.410958904109589, 'behavior': 0.054882812500000044, 'evidence': 0.8335784313725491, 'trajectory': 0.0}",Strong evidence strength and experience alignment. Relative gap in career trajectory.
-CAND_0076831,0.345778,"{'cross': 0.236486486486485, 'experience': 0.1780821917808219, 'behavior': 0.3439453125000001, 'evidence': 0.8276960784313725, 'trajectory': 0.5}",Strong evidence strength and career trajectory. Relative gap in experience alignment.
-CAND_0054394,0.343574,"{'cross': 0.3749999999999997, 'experience': 0.1917808219178082, 'behavior': 0.7685546875000001, 'evidence': 0.029656862745098017, 'trajectory': 0.5}",Strong behavior reliability and career trajectory. Relative gap in evidence strength.
-CAND_0065195,0.342862,"{'cross': 0.23817567567567502, 'experience': 0.3287671232876712, 'behavior': 0.693359375, 'evidence': 0.7416666666666667, 'trajectory': 0.0}",Strong evidence strength and behavior reliability. Relative gap in career trajectory.
-CAND_0058575,0.312542,"{'cross': 0.17229729729729656, 'experience': 0.4246575342465753, 'behavior': 0.5353515624999999, 'evidence': 0.09705882352941175, 'trajectory': 0.5}",Strong behavior reliability and career trajectory. Relative gap in evidence strength.
-CAND_0009024,0.301064,"{'cross': 0.021959459459458684, 'experience': 0.3424657534246575, 'behavior': 0.23515625000000012, 'evidence': 0.8541666666666666, 'trajectory': 0.5}",Strong evidence strength and career trajectory. Relative gap in retrieval relevance.
-CAND_0078492,0.28488,"{'cross': 0.14864864864864782, 'experience': 0.3287671232876712, 'behavior': 0.5052734375000001, 'evidence': 0.7051470588235293, 'trajectory': 0.0}",Strong evidence strength and behavior reliability. Relative gap in career trajectory.
-CAND_0077285,0.27116,"{'cross': 0.12668918918918914, 'experience': 0.3835616438356164, 'behavior': 0.3529296875, 'evidence': 0.14191176470588238, 'trajectory': 0.5}",Strong career trajectory and experience alignment. Relative gap in retrieval relevance.
-CAND_0037000,0.222149,"{'cross': 0.0, 'experience': 0.0, 'behavior': 0.483984375, 'evidence': 0.7779411764705881, 'trajectory': 0.5}",Strong evidence strength and career trajectory. Relative gap in experience alignment.
-CAND_0030348,0.213968,"{'cross': 0.020270270270268634, 'experience': 0.2465753424657534, 'behavior': 0.2224609375, 'evidence': 0.9232843137254901, 'trajectory': 0.0}",Strong evidence strength and experience alignment. Relative gap in career trajectory.
-CAND_0008239,0.203773,"{'cross': 0.03378378378378426, 'experience': 0.1780821917808219, 'behavior': 0.5966796874999999, 'evidence': 0.08749999999999997, 'trajectory': 0.5}",Strong behavior reliability and career trajectory. Relative gap in retrieval relevance.
+candidate_id,rank,score,reasoning
+CAND_0039754,1,0.816082,Strong experience alignment and evidence strength.
+CAND_0093912,2,0.763946,Strong retrieval relevance and career trajectory. Relative gap in experience alignment.
+CAND_0094759,3,0.754162,Strong career trajectory and experience alignment. Relative gap in behavior reliability.
+CAND_0041669,4,0.752691,Strong retrieval relevance and evidence strength.
+CAND_0005649,5,0.732735,Strong career trajectory and retrieval relevance. Relative gap in evidence strength.
+CAND_0041610,6,0.730683,Strong retrieval relevance and evidence strength.
+CAND_0055992,7,0.724167,Strong experience alignment and evidence strength.
+CAND_0069905,8,0.715193,Strong retrieval relevance and evidence strength.
+CAND_0046064,9,0.677783,Strong experience alignment and evidence strength.
+CAND_0029367,10,0.675609,Strong career trajectory and evidence strength. Relative gap in experience alignment.
+CAND_0065878,11,0.64646,Strong career trajectory and evidence strength. Relative gap in behavior reliability.
+CAND_0049538,12,0.646383,Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
+CAND_0095528,13,0.645805,Strong career trajectory and evidence strength. Relative gap in behavior reliability.
+CAND_0098846,14,0.636487,Strong retrieval relevance and experience alignment. Relative gap in evidence strength.
+CAND_0079064,15,0.62698,Strong career trajectory and behavior reliability. Relative gap in experience alignment.
+CAND_0007412,16,0.62258,Strong behavior reliability and experience alignment.
+CAND_0070398,17,0.60162,Strong evidence strength and experience alignment.
+CAND_0055905,18,0.597836,Strong evidence strength and experience alignment.
+CAND_0061265,19,0.594239,Strong retrieval relevance and evidence strength. Relative gap in career trajectory.
+CAND_0044855,20,0.592403,Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
+CAND_0018722,21,0.587522,Strong retrieval relevance and behavior reliability. Relative gap in evidence strength.
+CAND_0008425,22,0.587052,Strong evidence strength and experience alignment. Relative gap in career trajectory.
+CAND_0042029,23,0.583409,Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
+CAND_0018499,24,0.581115,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0064326,25,0.580431,Strong evidence strength and experience alignment.
+CAND_0010257,26,0.578347,Strong behavior reliability and evidence strength.
+CAND_0091534,27,0.573084,Strong experience alignment and evidence strength. Relative gap in retrieval relevance.
+CAND_0006557,28,0.572379,Strong evidence strength and experience alignment. Relative gap in behavior reliability.
+CAND_0014440,29,0.566292,Strong retrieval relevance and experience alignment.
+CAND_0024620,30,0.565882,Strong retrieval relevance and behavior reliability. Relative gap in evidence strength.
+CAND_0006567,31,0.563977,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0081846,32,0.561708,Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
+CAND_0041568,33,0.561554,Strong evidence strength and retrieval relevance. Relative gap in behavior reliability.
+CAND_0006418,34,0.558075,Strong evidence strength and behavior reliability. Relative gap in experience alignment.
+CAND_0076251,35,0.556789,Strong evidence strength and experience alignment. Relative gap in behavior reliability.
+CAND_0052328,36,0.556004,Strong behavior reliability and evidence strength. Relative gap in career trajectory.
+CAND_0026532,37,0.550504,Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
+CAND_0078002,38,0.549838,Strong evidence strength and behavior reliability. Relative gap in career trajectory.
+CAND_0030953,39,0.547635,Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
+CAND_0040117,40,0.546264,Strong evidence strength and retrieval relevance. Relative gap in behavior reliability.
+CAND_0036437,41,0.546051,Strong behavior reliability and evidence strength. Relative gap in experience alignment.
+CAND_0081852,42,0.541572,Strong career trajectory and retrieval relevance. Relative gap in evidence strength.
+CAND_0076904,43,0.538736,Strong career trajectory and evidence strength. Relative gap in experience alignment.
+CAND_0030031,44,0.535905,Strong evidence strength and behavior reliability. Relative gap in experience alignment.
+CAND_0037944,45,0.533062,Strong career trajectory and evidence strength. Relative gap in behavior reliability.
+CAND_0093331,46,0.53222,Strong experience alignment and evidence strength. Relative gap in retrieval relevance.
+CAND_0083307,47,0.530204,Strong experience alignment and behavior reliability. Relative gap in evidence strength.
+CAND_0057701,48,0.523977,Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
+CAND_0087364,49,0.519399,Strong evidence strength and retrieval relevance. Relative gap in experience alignment.
+CAND_0046525,50,0.515593,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0011687,51,0.51536,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0078042,52,0.504853,Strong behavior reliability and evidence strength. Relative gap in experience alignment.
+CAND_0045250,53,0.501404,Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
+CAND_0036863,54,0.499405,Strong career trajectory and evidence strength. Relative gap in behavior reliability.
+CAND_0007009,55,0.490895,Strong experience alignment and behavior reliability. Relative gap in retrieval relevance.
+CAND_0084819,56,0.4864,Strong evidence strength and behavior reliability. Relative gap in career trajectory.
+CAND_0030827,57,0.483858,Strong career trajectory and behavior reliability. Relative gap in evidence strength.
+CAND_0099401,58,0.477353,Strong experience alignment and retrieval relevance. Relative gap in evidence strength.
+CAND_0070485,59,0.460715,Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
+CAND_0047721,60,0.459343,Strong career trajectory and evidence strength. Relative gap in retrieval relevance.
+CAND_0064904,61,0.458854,Strong evidence strength and behavior reliability. Relative gap in experience alignment.
+CAND_0031593,62,0.457679,Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
+CAND_0092278,63,0.456667,Strong evidence strength and experience alignment. Relative gap in behavior reliability.
+CAND_0009837,64,0.455083,Strong evidence strength and behavior reliability. Relative gap in experience alignment.
+CAND_0017960,65,0.449196,Strong experience alignment and behavior reliability. Relative gap in evidence strength.
+CAND_0086151,66,0.446952,Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
+CAND_0074735,67,0.446467,Strong behavior reliability and evidence strength. Relative gap in retrieval relevance.
+CAND_0042100,68,0.440346,Strong evidence strength and experience alignment. Relative gap in career trajectory.
+CAND_0027801,69,0.440345,Strong evidence strength and experience alignment. Relative gap in retrieval relevance.
+CAND_0068811,70,0.437616,Strong experience alignment and evidence strength. Relative gap in retrieval relevance.
+CAND_0007460,71,0.434227,Strong evidence strength and behavior reliability. Relative gap in experience alignment.
+CAND_0000031,72,0.431906,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0066999,73,0.426799,Strong evidence strength and retrieval relevance. Relative gap in career trajectory.
+CAND_0086022,74,0.424759,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0058688,75,0.416637,Strong behavior reliability and evidence strength. Relative gap in retrieval relevance.
+CAND_0096142,76,0.416157,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0002025,77,0.414761,Strong behavior reliability and retrieval relevance. Relative gap in career trajectory.
+CAND_0011162,78,0.410818,Strong behavior reliability and career trajectory. Relative gap in evidence strength.
+CAND_0044883,79,0.409456,Strong behavior reliability and career trajectory. Relative gap in evidence strength.
+CAND_0054123,80,0.39632,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0003977,81,0.394648,Strong evidence strength and career trajectory. Relative gap in experience alignment.
+CAND_0010770,82,0.393196,Strong experience alignment and career trajectory. Relative gap in evidence strength.
+CAND_0062247,83,0.392919,Strong behavior reliability and experience alignment. Relative gap in evidence strength.
+CAND_0030468,84,0.382658,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0075249,85,0.364308,Strong evidence strength and behavior reliability. Relative gap in retrieval relevance.
+CAND_0019480,86,0.363371,Strong behavior reliability and evidence strength. Relative gap in experience alignment.
+CAND_0015528,87,0.357324,Strong evidence strength and experience alignment. Relative gap in career trajectory.
+CAND_0061339,88,0.354116,Strong behavior reliability and evidence strength. Relative gap in experience alignment.
+CAND_0070202,89,0.349075,Strong evidence strength and career trajectory. Relative gap in behavior reliability.
+CAND_0066376,90,0.345917,Strong evidence strength and experience alignment. Relative gap in career trajectory.
+CAND_0076831,91,0.345778,Strong evidence strength and career trajectory. Relative gap in experience alignment.
+CAND_0054394,92,0.343574,Strong behavior reliability and career trajectory. Relative gap in evidence strength.
+CAND_0065195,93,0.342862,Strong evidence strength and behavior reliability. Relative gap in career trajectory.
+CAND_0058575,94,0.312542,Strong behavior reliability and career trajectory. Relative gap in evidence strength.
+CAND_0009024,95,0.301064,Strong evidence strength and career trajectory. Relative gap in retrieval relevance.
+CAND_0078492,96,0.28488,Strong evidence strength and behavior reliability. Relative gap in career trajectory.
+CAND_0077285,97,0.27116,Strong career trajectory and experience alignment. Relative gap in retrieval relevance.
+CAND_0037000,98,0.222149,Strong evidence strength and career trajectory. Relative gap in experience alignment.
+CAND_0030348,99,0.213968,Strong evidence strength and experience alignment. Relative gap in career trajectory.
+CAND_0008239,100,0.203773,Strong behavior reliability and career trajectory. Relative gap in retrieval relevance.

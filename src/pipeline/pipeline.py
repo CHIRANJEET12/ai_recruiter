@@ -150,11 +150,22 @@ class Pipeline:
         intelligence_results = self.IntelligenceofCandidate(rule_ranked)
         final_ranked = self.finalizeWithJDWeightedRankings(parsed_jd, intelligence_results)
 
-        df = pd.DataFrame(final_ranked)
+        final_new_ranked = []
+
+        for rank, candidate in enumerate(final_ranked, start=1):
+            final_new_ranked.append({
+                "candidate_id": candidate.candidate_id,
+                "rank": rank,
+                "score": candidate.final_score,
+                "reasoning": candidate.reasoning
+            })
+            
+        df = pd.DataFrame(final_new_ranked)
+
         df.to_csv(
-    "final_ranked_candidates.csv",
-    index=False
-)
+            "final_ranked_candidates.csv",
+            index=False
+        )
         print("Saved to final_ranked_candidates.csv")
 
         self.display_results(final_ranked)

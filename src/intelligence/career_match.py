@@ -1,4 +1,4 @@
-from build_index import model
+# from models.embedding_model import model
 
 def calculate_career_match_score(candidate):
 
