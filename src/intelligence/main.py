@@ -43,11 +43,11 @@ class Intelligence:
         cross_score_raw = candidate.get("cross_score", 0)
         cross_score = Intelligence._to_percent_score(cross_score_raw)
 
+        f1_candidate_score = (2 * career_match_score * evidence_score) / (career_match_score + evidence_score)
+
         overall_score = round(
             (
-                career_match_score * 0.40
-                +
-                evidence_score * 0.25
+                f1_candidate_score * 0.35
                 +
                 behavior_score * 0.10
                 +
@@ -62,12 +62,13 @@ class Intelligence:
             2
         )        
         
-        if career_match_score < 20:
-            overall_score = overall_score * 0.50
+        # if career_match_score < 20:
+        #     overall_score = overall_score * 0.50
 
         return {
             "candidate_id": candidate["candidate_id"],
             "overall_score": overall_score,
+            "f1_candidate_score": f1_candidate_score,
             "experience_score": experience_score,
             "career_match_score": career_match_score,
             "evidence_score": evidence_score,
@@ -108,6 +109,7 @@ class Save_data:
                 fieldnames=[
                     "candidate_id",
                     "overall_score",
+                    "f1_candidate_score",
                     "experience_score",
                     "career_match_score",
                     "evidence_score",
