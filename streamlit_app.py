@@ -11,8 +11,7 @@ SRC = Path(__file__).parent / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-DATA_DIR = Path("DATA")
-SAMPLE_PATH = DATA_DIR / "sample_candidates.json"
+SAMPLE_PATH = Path("sample_candidates.json")
 
 st.set_page_config(page_title="AI Recruiter", layout="wide", page_icon="⊕")
 
