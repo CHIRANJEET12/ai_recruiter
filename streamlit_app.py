@@ -168,16 +168,21 @@ st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 with st.expander("Job Description", expanded=False):
     st.markdown(f"<div class='jd-box'>{JD_TEXT}</div>", unsafe_allow_html=True)
 
+for k in ["candidates", "results", "enriched", "csv_bytes", "elapsed"]:
+    if k not in st.session_state:
+        st.session_state[k] = None
+
 sample = load_sample()
 data_tab, upload_tab = st.tabs(["Sample Data (100 candidates)", "Upload Custom File"])
-
-candidates = []
 
 with data_tab:
     if sample:
         st.markdown(f"<div class='pipeline-box' style='margin-bottom:16px;'><strong>{len(sample)}</strong> pre-loaded candidates from <code>DATA/sample_candidates.json</code></div>", unsafe_allow_html=True)
         if st.button("Run Pipeline on Sample Data", type="primary", use_container_width=True):
-            candidates = sample
+            for k in ["results", "enriched", "csv_bytes", "elapsed"]:
+                st.session_state[k] = None
+            st.session_state.candidates = sample
+            st.rerun()
 
 with upload_tab:
     uploaded = st.file_uploader("Upload candidates.json or .jsonl", type=["json", "jsonl"], label_visibility="collapsed")
@@ -186,35 +191,50 @@ with upload_tab:
             parsed = parse_upload(uploaded.getvalue(), uploaded.name)
             st.markdown(f"<div class='pipeline-box' style='margin-bottom:16px;'><strong>{len(parsed)}</strong> candidates loaded from <code>{uploaded.name}</code></div>", unsafe_allow_html=True)
             if st.button("Run Pipeline on Uploaded Data", type="primary", use_container_width=True):
-                candidates = parsed
+                for k in ["results", "enriched", "csv_bytes", "elapsed"]:
+                    st.session_state[k] = None
+                st.session_state.candidates = parsed
+                st.rerun()
         except Exception as e:
             st.error(f"Failed to parse file: {e}")
 
-if candidates and len(candidates) > 0:
+candidates = st.session_state.candidates
+
+if candidates:
+    cand_list = candidates[:100] if len(candidates) > 100 else candidates
     if len(candidates) > 100:
         st.warning(f"Dataset contains {len(candidates)} candidates. Only the first 100 will be used (sandbox limit).")
-        candidates = candidates[:100]
 
-    progress_bar = st.progress(0)
-    status_text = st.empty()
-    status_text.text("Initializing…")
+    results = st.session_state.results
+    enriched = st.session_state.enriched
+    csv_bytes = st.session_state.csv_bytes
+    _elapsed = st.session_state.elapsed
 
-    import time as _time
-    _t0 = _time.time()
-    try:
-        results, ranked_objects, enriched = run_pipeline(candidates, JD_TEXT, progress_bar, status_text)
-        _elapsed = _time.time() - _t0
-    except Exception as e:
-        progress_bar.empty()
-        status_text.error(f"Pipeline failed: {e}")
-        st.error(f"Pipeline error: {e}")
-        st.stop()
+    if results is None:
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        status_text.text("Initializing…")
 
-    csv_buf = io.StringIO()
-    writer = csv.DictWriter(csv_buf, fieldnames=["candidate_id", "rank", "score", "reasoning"])
-    writer.writeheader()
-    writer.writerows(results)
-    csv_bytes = csv_buf.getvalue().encode("utf-8")
+        import time as _time
+        _t0 = _time.time()
+        try:
+            results, ranked_objects, enriched = run_pipeline(cand_list, JD_TEXT, progress_bar, status_text)
+            _elapsed = _time.time() - _t0
+            csv_buf = io.StringIO()
+            writer = csv.DictWriter(csv_buf, fieldnames=["candidate_id", "rank", "score", "reasoning"])
+            writer.writeheader()
+            writer.writerows(results)
+            csv_bytes = csv_buf.getvalue().encode("utf-8")
+            st.session_state.results = results
+            st.session_state.enriched = enriched
+            st.session_state.csv_bytes = csv_bytes
+            st.session_state.elapsed = _elapsed
+            st.rerun()
+        except Exception as e:
+            progress_bar.empty()
+            status_text.error(f"Pipeline failed: {e}")
+            st.error(f"Pipeline error: {e}")
+            st.stop()
 
     _within_limit = _elapsed <= 300
     st.markdown(
