@@ -1,0 +1,121 @@
+# Redrob Hackathon — Submission Metadata Template
+#
+# Copy this file to your repo root as `submission_metadata.yaml` and fill it in.
+# The fields here should match what you submit via the portal at upload time.
+# Stage 3 review uses this file to verify your portal metadata.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Decepticons"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Chiranjeet Dwivedy"
+  email: "chiranjeetcodes121@gmail.com"   # Used for all organizer communication
+  phone: "+91-8840172561"        # Used for top-50 / top-10 outreach
+
+team_members:
+  - name: "Vedant Sharma"
+    email: "23052933@kiit.ac.in"
+    role: "Engineer"          # Optional, e.g. "Team Lead", "Backend", "Data"
+  - name: "Akash Pandey"
+    email: "akash.pan05@gmail.com"
+    role: "Engineer"
+  - name: "Chiranjeet Dwivedy"
+    email: "chiranjeetcodes121@gmail.com"
+    role: "Engineer"
+  # Add more members as needed; solo participants list just one member
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/CHIRANJEET12/ai_recruiter"
+# Required. Must be reachable. Private repos OK if you can grant organizer
+# access at Stage 3 (the email to add will be communicated then).
+
+sandbox_link: "http://airecruit.streamlit.app/"
+# Required. A working hosted environment where the ranker can be run on a small
+# candidate sample. See Section 10.5 of submission_spec.md for acceptable
+# platforms (HuggingFace Spaces, Streamlit Cloud, Replit, Colab, Docker, Binder).
+
+reproduce_command: "python src/main.py"
+# The single command that produces submission.csv from candidates.jsonl.
+# Should run end-to-end within 5 minutes on CPU with 16GB RAM and no network.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Windows PC"                   # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
+  cpu_cores: 8                                  # Number of CPU cores used
+  ram_gb: 16                                    # Available RAM in GB
+  python_version: "3.10.11"                      # python --version
+  os: "Windows 11"                              # Or "Ubuntu 22.04 LTS", etc.
+  uses_gpu_for_inference: false                 # Must be false — see compute constraints
+  has_network_during_ranking: false             # Must be false — no API calls during ranking
+  pre_computation_required: false               # true if you pre-compute embeddings or train models offline
+  pre_computation_time_minutes: 0               # Approximate, if applicable
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+# Transparency only — declared use is NOT penalized. Be honest. Stage 5 interview
+# may verify these declarations against your code; declarations that contradict
+# your code or your interview are flagged.
+ai_tools_used:
+  - "Claude"        # e.g. for architecture discussion, code review
+  - "ChatGPT"
+  - "Gemini" # e.g. for autocomplete
+  # Other options: "ChatGPT", "Cursor", "Gemini", "Codeium", "Other", "None"
+
+ai_usage_summary: |
+  Used ChatGPT for architectural discussions, debugging, and implementation guidance while developing the candidate retrieval and ranking pipeline.
+  AI assistance was used to review code structure, troubleshoot issues, and discuss improvements for BM25 retrieval, embedding retrieval, hybrid ranking, and reranking strategies. 
+  All implementation, integration, testing, and design decisions were completed by the developer. No candidate data was shared with external AI services beyond the provided hackathon dataset.
+
+# ============================================================================
+# Approach summary (optional but recommended)
+# ============================================================================
+methodology_summary: |
+  The solution follows a multi-stage candidate retrieval and ranking pipeline
+  designed to balance retrieval quality, semantic understanding, and execution
+  efficiency.
+
+  Candidate profiles are first converted into rich textual documents by combining
+  profile information, skills, career history, education, certifications, and
+  important platform signals such as recruiter response rate, GitHub activity,
+  open-to-work status, notice period, and relocation preference.
+
+  The first retrieval stage uses BM25 to efficiently identify candidates with
+  strong lexical overlap with the job description. This is complemented by a
+  semantic retrieval stage using BGE embeddings to capture contextual similarity
+  beyond exact keyword matching. The normalized scores from both methods are
+  combined through weighted hybrid retrieval to produce an initial ranked list.
+
+  The hybrid retriever prioritizes recall, ensuring that relevant candidates are
+  not missed even when their profiles use different terminology than the job
+  description.
+
+  The retrieved candidates are then prepared for a Cross-Encoder reranking stage,
+  where the job description and candidate profile are jointly evaluated to improve
+  ranking precision. This stage is followed by an intelligence-based scoring
+  module that incorporates behavioral signals, production experience, recruiter
+  engagement, and other domain-specific heuristics to generate the final ranking.
+
+  The architecture is modular, extensible, and optimized to scale to large
+  candidate pools while maintaining high retrieval quality.
+
+  The project was developed collaboratively by a three-member team, with my
+  primary contribution focused on designing and implementing the candidate
+  retrieval pipeline, including BM25 retrieval, embedding-based retrieval,
+  hybrid ranking, data preprocessing, and the modular retrieval architecture.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true        # I have read submission_spec.md in full
+  code_is_original_work: true       # My code is my team's original work (using AI as a tool is fine)
+  no_collusion: true                # I have not coordinated my submission with other teams
+  honeypot_check_done: true         # OPTIONAL — set true if you explicitly checked for honeypots in your ranking
+  reproduction_tested: true         # I have tested that my reproduce_command runs end-to-end

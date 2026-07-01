@@ -163,10 +163,10 @@ class Pipeline:
         df = pd.DataFrame(final_new_ranked)
 
         df.to_csv(
-            "final_ranked_candidates.csv",
+            "submission.csv",
             index=False
         )
-        print("Saved to final_ranked_candidates.csv")
+        print("Saved to submission.csv")
 
         self.display_results(final_ranked)
 
